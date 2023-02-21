@@ -1,0 +1,15 @@
+//To print reverse of a given number
+#include<stdio.h>
+main()
+{
+	int n,m,rev,r;
+	scanf("%d",&n);         
+	m=n;
+	while(n>0)
+	{
+		r=n%10;
+		rev=rev*10+r;
+		n=n/10;
+	}
+	printf("%d",rev);
+}
