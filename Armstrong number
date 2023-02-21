@@ -1,0 +1,22 @@
+//To check whether the given number is armstrong or not
+#include<stdio.h>
+main()
+{
+	int n,r,sum,m;
+	scanf("%d",&n);
+	m=n;
+	while(n>0)
+	{
+		r=n%10;
+		sum=sum+(r*r*r);
+		n=n/10;
+	}
+	if(m==sum)
+	{
+		printf("Armstrong number");
+	}
+	else
+	{
+		printf("Not an armsrong number");
+	}
+}
