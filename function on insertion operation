@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int insert(int x,int y);
+int i,n,a[100];
+main()
+{
+	int pos1,ele;
+	scanf("%d",&n);     //n=number of array elements to be inserted
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d %d",&ele,&pos1); //Element to be inserted and at which position
+	insert(ele,pos2);
+	getch();
+}
+int insert(int x,int y)
+{
+	for(i=n;i>y;i--)
+	{
+		a[i]=a[i-1];
+	}
+	a[y]=x;
+	printf("Elements after insertion:");
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",a[i]);
+	}
+}
