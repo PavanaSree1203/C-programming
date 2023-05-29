@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+int del(int z);
+int insert(int x,int y);
+int i,n,a[100];
+main()
+{
+	int pos1,pos2,ele;
+	scanf("%d",&n);     //n=number of array elements to be inserted
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	scanf("%d",&pos1);         //Position to be deleted
+	del(pos1);
+	scanf("%d %d",&ele,&pos2); //Element to be inserted and at which position
+	insert(ele,pos2);
+	getch();
+}
+int del(int z)
+{
+	for(i=z;i<n-1;i++)
+	{
+		a[i]=a[i+1];
+	}
+	printf("Elements after deletion:");
+	for(i=0;i<n-1;i++)
+	{
+		printf("%d ",a[i]);
+	}
+}
+int insert(int x,int y)
+{
+	for(i=n;i>y;i--)
+	{
+		a[i]=a[i-1];
+	}
+	a[y]=x;
+	printf("Elements after insertion:");
+	for(i=0;i<n;i++)
+	{
+		printf("%d ",a[i]);
+	}
+}
